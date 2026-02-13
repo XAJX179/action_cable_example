@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :messages, only: [:create]
   root "hangouts#index"
   get "hangouts/index"
   devise_for :users
