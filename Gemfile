@@ -57,3 +57,7 @@ group :development do
 end
 
 gem "devise", "~> 5.0"
+
+gem "bulma-rails", "~> 1.0"
+
+gem "dartsass-rails", "~> 0.5.1"
