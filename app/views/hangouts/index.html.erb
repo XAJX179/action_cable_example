@@ -1,14 +1,8 @@
 <div>
+  <%= turbo_stream_from "messages" %>
   <div id="message-display">
     <% @messages.each do |message| %>
-      <article class="message">
-        <div class="message-header">
-          <%= message.user.email %>
-        </div>
-        <div class="message-body">
-          <%= message.body %>
-        </div>
-      </article>
+      <%= render partial: "messages/message", locals: { message: message } %>
     <% end %>
   </div>
   <div id="message-form">
